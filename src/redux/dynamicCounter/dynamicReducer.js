@@ -4,18 +4,18 @@ const initialValue = {
     value: 0
 }
 
-const countReducer = (state = initialValue, action) =>{
+const dynamicReducer = (state = initialValue, action) =>{
     switch (action.type) {
         case INCREMENT:
             return{
                 ...state,
-                value: state.value + 1,
+                value: state.value + action.payload,
             }
         
         case DECREMENT:
             return{
                 ...state,
-                value: state.value - 1,
+                value: state.value - action.payload,
             }
     
         default:
@@ -23,4 +23,4 @@ const countReducer = (state = initialValue, action) =>{
     }
 }
 
-export default countReducer;
+export default dynamicReducer;

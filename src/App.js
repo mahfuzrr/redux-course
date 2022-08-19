@@ -1,7 +1,7 @@
 import { Provider } from "react-redux";
 import Counter from "./components/Counter";
 import store  from "./redux/store";
-
+import DynamicCounter from "./components/dynamicCounter";
 function App() {
   return (
     <Provider store={store}>
@@ -13,6 +13,7 @@ function App() {
 
             <div className="max-w-md mx-auto mt-10 space-y-5">
                 <Counter/>
+                <DynamicCounter/>
             </div>
       </div>
     </Provider>
